@@ -1,0 +1,52 @@
+/*详情页样式*/
+.subject-info{
+  overflow: hidden;
+  position: relative;
+  margin-bottom:30px;
+}
+.subject-info .right{
+  float:right;
+  margin:5px;
+  -webkit-box-shadow: 0px 0px 5px 1px #ddd;
+  box-shadow: 0px 0px 5px 1px #ddd;
+}
+.subject-info .cover{
+  width:100px;
+}
+.subject-info .left{
+  margin-right:100px;
+  padding-bottom:30px;
+}
+
+.subject-info .meta{
+  color:#494949;
+  margin-top:15px;
+  padding-right: 24px;
+}
+.subject-info .rating strong{
+  font-weight: normal;
+  color:#494949;
+  padding-right:8px;
+}
+.subject-info .rating span{
+  color:#aaa;
+}
+.subject-mark .mark-item{
+  margin-bottom:30px;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+}
+.subject-mark .mark-item a{
+  height:30px;
+  line-height: 30px;
+  display: block;
+  border:1px solid #ffb712;
+  border-radius:3px;
+  margin-right:10px;
+  color:#ffb712;
+  font-size:15px;
+  text-align: center;
+  -webkit-flex:1;
+  flex:1;
+}

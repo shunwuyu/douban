@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>vertical-align</title>
+  <style>
+  *{
+    margin:0;
+    padding:0;
+  }
+  .box{
+    width: 300px;
+    height: 100px;
+    background-color: red;
+    color:white;
+    display: table;
+  }
+  .vm{
+    display: table-cell;
+    vertical-align: middle;
+  }
+  .avatar-box img{vertical-align: middle;
+    width:40px;height:40px;border-radius: 50%;}
+  </style>
+</head>
+<body>
+<div class="box">
+  <p class="vm">我想在中间</p>
+  <p class="vm">我也想在中间</p>
+</div>
+<div class="avatar-box">
+  <img src="https://pic.36krcnd.com/avatar/201609/08053427/94tvcswasgnm4mw7.jpg!480" alt="">
+  <span>喻顺武</span>
+</div>
+</body>
+</html>

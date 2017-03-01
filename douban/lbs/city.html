@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=5LaN6hvbUGn0ZUk0rQ0bc1TbWEUH7Wdo"></script>
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+</head>
+<body>
+<div>当前地址：</div>
+<p id="mes">正在查找地址...</p>
+<script>
+window.onload = function() {
+  loadDemo();
+}
+
+function loadDemo() {
+  navigator.geolocation.getCurrentPosition(updateLocation,handleLocationError);
+}
+
+function updateLocation(position) {
+  var geoc = new BMap.Geocoder();
+  var latitude = position.coords.latitude;
+  var longitude = position.coords.longitude;
+  console.log(latitude,longitude);
+  var point = new BMap.Point(longitude,latitude);
+  geoc.getLocation(point, function(rs){
+		var addComp = rs.addressComponents;
+		var city =  addComp.province + addComp.city + addComp.district + addComp.street ;
+    document.getElementById('mes').innerHTML = city;
+	});
+}
+
+function handleLocationError(error) {
+
+}
+</script>
+
+</body>
+</html>

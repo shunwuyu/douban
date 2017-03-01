@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=5LaN6hvbUGn0ZUk0rQ0bc1TbWEUH7Wdo"></script>
+  <style>
+  *{
+    margin: 0;
+    padding: 0;
+  }
+  html,body{
+    height: 100%;
+  }
+  #map{
+    height: 100%;
+  }
+  </style>
+</head>
+<body>
+<div id="map"></div>
+<script>
+  var map = new BMap.Map("map");
+  map.centerAndZoom(new BMap.Point(118.454, 32.955), 15);
+	map.enableScrollWheelZoom();
+  var map;
+  window.onload = function() {
+    loadDemo();
+}
+function loadDemo(){
+  navigator.geolocation.getCurrentPosition(updateLocation,handleLocationError);
+}
+function updateLocation(position) {
+    var latitude = position.coords.latitude,
+        longitude = position.coords.longitude,
+        accuracy = position.coords.accuracy;
+    // map.panTo(new BMap.Point(longitude,latitude));
+     //longitude 经度  latitude 纬度
+    var pt = new BMap.Point(longitude,latitude);
+    var myIcon = new BMap.Icon("http://developer.baidu.com/map/jsdemo/img/fox.gif", new BMap.Size(300,157));
+    var marker2 = new BMap.Marker(pt,{icon:myIcon});
+    map.centerAndZoom(pt, 15);
+    map.addOverlay(marker2);
+}
+
+function handleLocationError(error) {
+    switch(error.code) {
+        case 0:
+            alert('获取不了位置，原因是：' + error.message);
+        break;
+
+        case 1:
+            alert('用户没有授权获取用户位置');
+        break;
+        case 2:
+            alert('浏览器搞不定你的位置');
+        break;
+        case 3:
+            alert('获取用户位置信息超时');
+        break;
+    }
+}
+
+</script>
+</body>
+</html>

@@ -1,0 +1,188 @@
+.card{
+  margin:0;
+}
+.promo_top_banner+.card {
+  margin-top:0px;
+}
+.row{
+  border-bottom: 1px solid #F2F2F2;
+  padding:15px 0 43px 0;
+}
+
+section{
+  margin:0;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+section:first-child{
+  padding-top:10px;
+}
+
+section h2{
+  display: inline-block;
+  min-width: 4em;
+  font-size:1.06rem;
+  color:#111;
+  padding-left:0;
+  padding-bottom:0;
+  margin-bottom:0;
+}
+
+section header{
+  padding:0 1.12rem;
+}
+
+section header a{
+  float:right;
+  font-size:.9rem;
+  line-height: 1.5rem;
+}
+
+section .section-content{
+  margin-bottom:-1.12rem;
+}
+
+/*列表样式*/
+.items{
+  font-size:0;
+  white-space: nowrap;
+  overflow-x: auto;
+  /*手机列表内容滚动优化，更流畅*/
+  -webkit-overflow-scrolling: touch;
+}
+
+.item>*{
+  font-size:.94rem;
+  white-space: normal;
+}
+
+.item{
+  display: inline-block;
+  vertical-align: top;
+  width:100px;
+  text-align: center;
+  margin-left:0.48rem;
+}
+
+.item:first-child{
+  margin-left:1.12rem;
+}
+
+.item a{
+  color:#111;
+}
+
+.item-poster{
+  width:100%;
+  overflow:hidden;
+  background-size:cover;
+  background-position: center;
+}
+
+.item-poster:before{
+  content:"";
+  float:left;
+  margin-top:142.85714%;
+}
+
+.item-title{
+  display: block;
+  overflow:hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  margin-top:.6rem;
+  line-height:.94rem;
+}
+
+.item__movie .item-title{
+  max-width: 100%;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+  word-wrap:normal;
+}
+
+.item-rating{
+  color:#aaa;
+  line-height: .94rem;
+  margin-top:.3rem;
+  font-size:.72rem;
+}
+
+/*发现好电影样式*/
+.interests ul{
+  white-space: nowrap;
+  overflow-x:auto;
+  padding:15px 15px 43px 15px;
+  font-size: 0;
+  margin-left:-5px;
+  -webkit-overflow-scrolling:touch;
+}
+.interests li{
+  margin:0 0 8px 8px;
+  font-size:.94rem;
+  display: inline-block;
+  border-radius: .25rem;
+  border:1px solid;
+  vertical-align: middle;
+}
+.interests a{
+  height:50px;
+  line-height: 50px;
+  padding:0 1.55rem;
+  letter-spacing: .1em;
+  overflow: auto;
+  display: block;
+  text-align: center;
+}
+.interests li.line{
+  width:100%;
+  display: block;
+  height: 1px;
+  border:0;
+  margin:0;
+}
+.type-list{
+  padding:1.12rem 0 1.88rem;
+  color:#eee;
+  font-size:.9rem;
+  overflow: hidden;
+}
+.types .section-content{
+  margin-bottom:0;
+  margin-left:.94rem;
+}
+
+
+.type-list li{
+  width:41.5%;
+  border-top:1px solid #eee;
+  border-right: 1px solid #eee;
+  float:left;
+  padding-right:1.12rem;
+  height:2.64rem;
+}
+.type-list a{
+  float:left;
+  display: inline-block;
+  width: 100%;
+  line-height: 2.64rem;
+}
+.type-list span{
+  color:#ccc;
+  float:right;
+  font-weight: bold;
+  display: inline-block;
+  border-right:1px solid #ccc;
+  border-bottom:1px solid #ccc;
+  width:.5rem;
+  height:.5rem;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  margin-top:1rem;
+}
+.type-list li:nth-child(even){
+  border-right:none;
+  padding-left:1.12rem;
+}

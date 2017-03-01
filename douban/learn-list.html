@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+    * {
+        margin:0;
+        padding:0;
+    }
+
+    span{
+        margin-left:10px;
+    }
+
+    a{
+        margin:5px;
+    }
+
+    ol,ul{
+        list-style: none;
+    }
+
+    li{
+        float:left;
+    }
+
+    ol li{
+        padding-left:10px;
+        list-style-type: decimal;
+        list-style-position: inside;
+    }
+    ol li a{
+        margin-left:10px;
+        display: block;
+
+    }
+    </style>
+</head>
+<body>
+<div>
+    <h2>影片分类<span>(<a href="https://movie.douban.com/tag/?view=type">更多</a>)</span></h2>
+    <div>
+        <ul>
+            <li><a href="#">爱情</a></li>
+            <li><a href="#">喜剧</a></li>
+            <li><a href="#">动作</a></li>
+        </ul>
+    </div>
+</div>
+<!--有序列表 近期热门-->
+<div>
+    <h2>近期热门<span>(<a>更多</a>)</span></h2>
+    <div>
+        <ol>
+            <li><a href="#">死侍</a></li>
+            <li><a href="#">极盗者</a></li>
+            <li><a href="#">检查官外传</a></li>
+            <li><a href="#">死侍</a></li>
+            <li><a href="#">极盗者</a></li>
+            <li><a href="#">检查官外传</a></li>
+        </ol>
+    </div>
+</div>
+<!--自定义列表-->
+<div>
+    <dl>
+        <dt>音乐风云榜</dt>
+        <dd>周杰伦  简单爱</dd>
+    </dl>
+    <dl>
+        <dt>音乐新歌榜</dt>
+        <dd>***  浪费</dd>
+    </dl>
+    <dl>
+        <dt>音乐原创榜</dt>
+        <dd>***  骄傲的少年</dd>
+    </dl>
+</div>
+
+</body>
+</html>
